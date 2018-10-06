@@ -11,7 +11,7 @@
 3. npm install webpack webpack-cli --save-dev  //安装webpack、webpack-cli
 4. touch webpack.config.js //使用配置
 5. 编辑文件
-
+```
 /* 将src/index.js文件拷贝到dist/main.js中 */
   const path = require('path');
 
@@ -24,5 +24,6 @@
       path: path.resolve(__dirname, 'dist')
     }
   };
+```
 
 
