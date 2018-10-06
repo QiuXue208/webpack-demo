@@ -25,5 +25,6 @@
     }
   };
 ```
+6. npx webpack //运行webpack.config.js文件，将entry文件拷贝到output中的文件
 
 
