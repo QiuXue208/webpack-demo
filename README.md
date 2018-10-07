@@ -5,7 +5,7 @@
  2. 用sass-loader将SCSS转译为CSS
 
 
- ### 操作步骤
+ ### 引入webpack
 
  #####   创建目录、进入目录
 
@@ -126,3 +126,29 @@ module.exports = {
 
 <img src="http://pg7gx692c.bkt.clouddn.com/Screenshot_3.png" alt="app" width="500" height="150">
 
+### 引入babel-loader
+
+##### 安装
+> webpack 4.x | babel-loader 7.x | babel 6.x
+
+`npm install -D babel-loader@7 babel-core babel-preset-env webpack`
+
+##### 使用loader
+给webpack.config.js文件添加如下代码:
+
+```javascript
+module: {
+  rules: [
+    {
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['env']
+        }
+      }
+    }
+  ]
+}
+```
