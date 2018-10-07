@@ -120,6 +120,8 @@ module.exports = {
 结果如下:
 
 ![app](http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png)
+
 ![module1](http://pg7gx692c.bkt.clouddn.com/Screenshot_2.png)
+
 ![module2](http://pg7gx692c.bkt.clouddn.com/Screenshot_3.png)
 
