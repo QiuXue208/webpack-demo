@@ -120,6 +120,8 @@ module.exports = {
 
 结果如下:
 
+<img src="http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png" alt="app" width="100" height="30">
+
 ![app](http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png){:height="100px" width="30px"}
 
 ![module1](http://pg7gx692c.bkt.clouddn.com/Screenshot_2.png)
