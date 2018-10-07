@@ -154,3 +154,11 @@ module: {
 ```
 ##### 运行webpack.config.js文件
 `npx webpack`
+
+这时,src/js下的所有文件都被翻译到dist/js/bundle.js文件,使用babel-loader,可以将ES6的语法转换成ES5
+
+### 引入sass-loader
+
+##### 安装
+`npm install sass-loader node-sass webpack --save-dev`
+
