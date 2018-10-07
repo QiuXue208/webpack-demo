@@ -96,10 +96,30 @@ module.exports = {
   }
 };
 ```
-##### 重新运行一下
+##### 重新运行一下webpack.config.js文件
 
 这次运行入口文件是`./src/js/app`,所以它会将该文件的内容拷贝到`dist/js/bundle.js`文件中
 
 ` npx webpack`
 
+##### 创建主页，并引入经过处理后的js文件
+` touch index.html`
+
+` vi index.html`
+
+```
+<body>
+    <script src="./dist/js/bundle.js"></script>
+</body>
+```
+
+##### 运行webpack-demo项目
+
+由于引入的文件中是app.js文件中拷贝过去的，所以运行的内容为app.js中的内容。
+
+结果如下:
+
+![app](http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png)
+![module1](http://pg7gx692c.bkt.clouddn.com/Screenshot_2.png)
+![module2](http://pg7gx692c.bkt.clouddn.com/Screenshot_3.png)
 
