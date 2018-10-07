@@ -25,8 +25,9 @@
 
  ######   编辑文件
 
+
 ```
-/* 将src/index.js文件拷贝到dist/main.js中 */
+  /* 将src/index.js文件拷贝到dist/main.js中 */
   const path = require('path');
 
   module.exports = {
@@ -44,4 +45,53 @@
 
  ` npx webpack `
 
+######   创建新的文件
+
+ `mkdir -p src/js`
+ `cd src/js`
+ `touch app.js module-1.js module-2.js`
+
+ ######  编辑新创建的文件的内容
+
+ module-1.js:
+ ```
+ function fn(){
+    alert('这是模块一')
+}
+/*当有人调用我时，我就把fn传给他*/
+export default fn
+ ```
+ module-2.js
+ ```
+ function fn(){
+    alert('这是模块二')
+}
+export default fn
+```
+app.js:
+```
+/*这里module1就代表了fn*/
+import module1 from './module-1'
+import module2 from './module-2'
+alert('这是进口文件')
+module1()
+module2()
+```
+
+ ###### 修改webpack.config.js文件
+
+```
+  /* 将src/js/app文件拷贝到dist/bundle.js中 */
+  const path = require('path');
+
+  module.exports = {
+    //入口
+    entry: './src/js/app.js',
+    //输出
+    output: {
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist')
+    }
+  };
+```
 
