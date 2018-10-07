@@ -26,7 +26,7 @@
  #####   编辑文件
 
 
-```
+```javascript
 /* 将src/index.js文件拷贝到dist/main.js中 */
 const path = require('path');
 
@@ -56,7 +56,7 @@ module.exports = {
  #####  编辑新创建的文件的内容
 
  module-1.js:
- ```
+ ```javascript
  function fn(){
     alert('这是模块一')
 }
@@ -64,14 +64,14 @@ module.exports = {
 export default fn
  ```
  module-2.js
- ```
+ ```javascript
  function fn(){
     alert('这是模块二')
 }
 export default fn
 ```
 app.js:
-```
+```javascript
 /*这里module1就代表了fn*/
 import module1 from './module-1'
 import module2 from './module-2'
@@ -82,7 +82,7 @@ module2()
 
  ##### 修改webpack.config.js文件
 
-```
+```javascript
 /* 将src/js/app.js文件拷贝到dist/js/bundle.js中 */
 const path = require('path');
 
@@ -107,7 +107,7 @@ module.exports = {
 
 ` vi index.html`
 
-```
+```html
 <body>
     <script src="./dist/js/bundle.js"></script>
 </body>
