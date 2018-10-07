@@ -7,23 +7,23 @@
 
  ### 操作步骤
 
- ######   创建目录、进入目录
+ #####   创建目录、进入目录
 
  ` mkdir webpack-demo && cd webpack-demo `
 
- ######   创建package.json文件
+ #####   创建package.json文件
 
  ` npm init -y `
 
- ######   安装webpack、webpack-cli
+ #####   安装webpack、webpack-cli
 
  ` npm install webpack webpack-cli --save-dev `
 
- ######   使用配置
+ #####  使用配置
 
  ` touch webpack.config.js `
 
- ######   编辑文件
+ #####   编辑文件
 
 
 ```
@@ -41,11 +41,11 @@ module.exports = {
 };
 ```
 
- ######   运行webpack.config.js文件，将entry文件拷贝到output中的文件
+ #####   运行webpack.config.js文件，将entry文件拷贝到output中的文件
 
  ` npx webpack `
 
-######   创建新的文件
+#####   创建新的文件
 
  `mkdir -p src/js`
 
@@ -53,7 +53,7 @@ module.exports = {
 
  `touch app.js module-1.js module-2.js`
 
- ######  编辑新创建的文件的内容
+ #####  编辑新创建的文件的内容
 
  module-1.js:
  ```
@@ -80,7 +80,7 @@ module1()
 module2()
 ```
 
- ###### 修改webpack.config.js文件
+ ##### 修改webpack.config.js文件
 
 ```
 /* 将src/js/app.js文件拷贝到dist/js/bundle.js中 */
@@ -96,7 +96,7 @@ module.exports = {
   }
 };
 ```
-###### 重新运行一下
+##### 重新运行一下
 
 这次运行入口文件是`./src/js/app`,所以它会将该文件的内容拷贝到`dist/js/bundle.js`文件中
 
