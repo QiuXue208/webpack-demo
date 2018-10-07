@@ -27,18 +27,18 @@
 
 
 ```
-  /* 将src/index.js文件拷贝到dist/main.js中 */
-  const path = require('path');
+/* 将src/index.js文件拷贝到dist/main.js中 */
+const path = require('path');
 
-  module.exports = {
-    //入口
-    entry: './src/index.js',
-    //输出
-    output: {
-      filename: 'main.js',
-      path: path.resolve(__dirname, 'dist')
-    }
-  };
+module.exports = {
+  //入口
+  entry: './src/index.js',
+  //输出
+  output: {
+     filename: 'main.js',
+     path: path.resolve(__dirname, 'dist')
+  }
+};
 ```
 
  ######   运行webpack.config.js文件，将entry文件拷贝到output中的文件
@@ -48,7 +48,9 @@
 ######   创建新的文件
 
  `mkdir -p src/js`
+
  `cd src/js`
+ 
  `touch app.js module-1.js module-2.js`
 
  ######  编辑新创建的文件的内容
