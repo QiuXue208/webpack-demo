@@ -200,10 +200,13 @@ body{
 }
 ```
 ##### 在入口文件app.js中添加新模块
-`import '../css/main.scss'`
+```javascript
+import '../css/main.scss'
+```
 
 ##### 运行webpack.config.js文件
 `npx webpack`
+
 这时`sass-loader`、`css-loader`、`style-loader`协作运行就会将`main.scss`翻译进`dist/js/bundle.js`中,其中有一系列处理又会使主页的`body`下的`p`元素的字体颜色设置为红色
 
 
