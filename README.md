@@ -114,10 +114,15 @@ module.exports = {
 ```
 
 ##### 运行webpack-demo项目
+` http-server -c-1`
 
-由于引入的文件中是app.js文件中拷贝过去的，所以运行的内容为app.js中的内容。
+由于引入的文件中是app.js文件中拷贝过去的，所以运行的内容为app.js中的内容。这里会显示三个`alert box`,内容依次为这是入口文件、这是模块一、这是模块二
 
 结果如下:
+
+```html
+<img src="http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png" alt="app">
+```
 
 ![app](http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png)
 
