@@ -120,11 +120,9 @@ module.exports = {
 
 结果如下:
 
-<img src="http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png" alt="app" width="100" height="30">
+<img src="http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png" alt="app" width="500" height="150">
 
-![app](http://pg7gx692c.bkt.clouddn.com/Screenshot_1.png){:height="100px" width="30px"}
+<img src="http://pg7gx692c.bkt.clouddn.com/Screenshot_2.png" alt="app" width="500" height="150">
 
-![module1](http://pg7gx692c.bkt.clouddn.com/Screenshot_2.png)
-
-![module2](http://pg7gx692c.bkt.clouddn.com/Screenshot_3.png)
+<img src="http://pg7gx692c.bkt.clouddn.com/Screenshot_3.png" alt="app" width="500" height="150">
 
