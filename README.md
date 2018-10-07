@@ -152,3 +152,5 @@ module: {
   ]
 }
 ```
+##### 运行webpack.config.js文件
+`npx webpack`
