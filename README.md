@@ -50,7 +50,7 @@ module.exports = {
  `mkdir -p src/js`
 
  `cd src/js`
- 
+
  `touch app.js module-1.js module-2.js`
 
  ######  编辑新创建的文件的内容
@@ -83,17 +83,23 @@ module2()
  ###### 修改webpack.config.js文件
 
 ```
-  /* 将src/js/app文件拷贝到dist/bundle.js中 */
-  const path = require('path');
+/* 将src/js/app.js文件拷贝到dist/js/bundle.js中 */
+const path = require('path');
 
-  module.exports = {
-    //入口
-    entry: './src/js/app.js',
-    //输出
-    output: {
-      filename: 'bundle.js',
-      path: path.resolve(__dirname, 'dist')
-    }
-  };
+module.exports = {
+  //入口
+  entry: './src/js/app.js',
+  //输出
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist/js')
+  }
+};
 ```
+###### 重新运行一下
+
+这次运行入口文件是`./src/js/app`,所以它会将该文件的内容拷贝到`dist/js/bundle.js`文件中
+
+` npx webpack`
+
 
