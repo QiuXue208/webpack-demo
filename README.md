@@ -162,3 +162,48 @@ module: {
 ##### 安装
 `npm install sass-loader node-sass webpack --save-dev`
 
+`npm install style-loader css-loader --save-dev`
+
+##### 编辑webpack.config.js文件
+
+```javascript
+// webpack.config.js
+module.exports = {
+	...
+    module: {
+        rules: [{
+            test: /\.scss$/,
+            use: [
+                "style-loader", // creates style nodes from JS strings
+                "css-loader", // translates CSS into CommonJS
+                "sass-loader" // compiles Sass to CSS, using Node Sass by default
+            ]
+        }]
+    }
+};
+```
+
+##### 添加一个scss文件
+`mkdir -p src/css`
+
+`cd src/css`
+
+`touch main.scss`
+
+`vi main.scss`
+
+```css
+body{
+    p{
+        color:red;
+    }
+}
+```
+##### 在入口文件app.js中添加新模块
+`import '../css/main.scss'`
+
+##### 运行webpack.config.js文件
+`npx webpack`
+这时`sass-loader`、`css-loader`、`style-loader`协作运行就会将`main.scss`翻译进`dist/js/bundle.js`中,其中有一系列处理又会使主页的`body`下的`p`元素的字体颜色设置为红色
+
+
